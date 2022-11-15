@@ -6,7 +6,7 @@
 
 目录结构如下:
 
-![image-20221115172230734](C:\Users\Mr.Gao\Desktop\博客\Android开发应用跟新或软件下载.assets\image-20221115172230734.png)
+![](https://img2022.cnblogs.com/blog/3034026/202211/3034026-20221115194526774-1687743823.png)
 
 ### MainActivity.java
 
