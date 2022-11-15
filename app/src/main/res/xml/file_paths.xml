@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <!--    外部路径-->
+    <external-path
+        name="external"
+        path="." />
+    <!--    外部文件路径-->
+    <external-files-path
+        name="external_files"
+        path="." />
+    <!--    隐藏路径-->
+    <cache-path
+        name="cache"
+        path="." />
+    <!--    外部隐藏路径-->
+    <external-cache-path
+        name="external_cache"
+        path="." />
+
+
+    <!--    最主要的是files-path和root-path，其它可写可不写-->
+    <!--    文件路径-->
+    <files-path
+        name="files"
+        path="." />
+    <!--    根目录-->
+    <root-path
+        name="root_path"
+        path="." />
+</paths>

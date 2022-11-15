@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android_study"
+
+    android:versionCode="1"
+    android:versionName="1.0">
+    <!--    网络权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--    软件安装权限-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!--    文件读写权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application
+        android:name=".application.SmartApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--        声明provider标签-->
+        <!--        authorities前面是你的项目包名  package="com.example.android_study",最够一个是fileprovider-->
+        <!--        exported，是否开启跨应用共享数据，默认false-->
+        <!--        grantUriPermissions 是否授予uri权限，默认false，我们选择true-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.android_study.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <!--       meta-data     -->
+            <!--       name选择android.support.FILE_PROVIDER_PATHS提供文件路径-->
+            <!--       resource选择提供文件路径的文件，这边新建在xml下，文件名随便取-->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <service
+            android:name=".common.update.UpdateService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

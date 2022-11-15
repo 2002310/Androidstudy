@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+    <TextView
+        android:id="@+id/tx"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:text="正在下载：50%"/>
+    <ProgressBar
+        android:id="@+id/pro"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/tx"
+        android:progress="50"
+        android:max="100"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+    <TextView
+        android:id="@+id/name"
+        android:layout_below="@+id/pro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="腾讯qq"
+        android:textSize="16sp"/>
+</RelativeLayout>
